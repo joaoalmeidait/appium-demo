@@ -13,24 +13,24 @@ public class ContactsPage extends BasePage {
     }
 
     public void openContacts(){
-        WebElement contactsIcon = waitForElement(By.xpath("(//android.widget.LinearLayout[@resource-id=\"com.google.android.contacts:id/navigation_bar_item_content_container\"])[1]"));
+        WebElement contactsIcon = waitForElement(By.xpath("//android.widget.TextView[@resource-id=\"com.google.android.contacts:id/navigation_bar_item_large_label_view\"]"));
         contactsIcon.click();
     }
 
     public void clickAddContactsButton(){
-        WebElement addContactButton = waitForElement(By.xpath("//com.google.android.material.floatingactionbutton.FloatingActionButton[@content-desc=\"Create contact\"]"));
+        WebElement addContactButton = waitForElement(By.xpath("//com.google.android.material.floatingactionbutton.FloatingActionButton[@content-desc=\"Criar contato\"]"));
         addContactButton.click();
     }
 
     public void enterContactInfo(String name, String phone){
-        WebElement nameField = waitForElement(By.xpath("//android.widget.EditText[@text=\"First name\"]"));
+        WebElement nameField = waitForElement(By.xpath("//android.widget.EditText[@text=\"Nome\"]"));
         nameField.sendKeys(name);
-        WebElement phoneField = waitForElement(By.xpath("//android.widget.EditText[@text=\"+1\"]"));
+        WebElement phoneField = waitForElement(By.xpath("//android.widget.EditText[@text=\"+55\"]"));
         phoneField.sendKeys(phone);
     }
 
     public void saveContact(){
-        WebElement saveButton = waitForElement(By.xpath("//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[2]/android.view.View[2]/android.widget.Button"));
+        WebElement saveButton = waitForElement(By.xpath("//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[3]/android.widget.Button"));
         saveButton.click();
         driver.pressKey(new KeyEvent(AndroidKey.BACK));
     }

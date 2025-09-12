@@ -17,7 +17,9 @@ public class DriverManager {
                 .setAutomationName("UiAutomator2")
                 .setAppPackage(appPackage)
                 .setAppWaitActivity(appWaitActivity)
-                .setUdid("emulator-5554")
+                .setApp("")
+                .setDeviceName("0065489810")
+                .setUdid("")
                 .setEnsureWebviewsHavePages(true)
                 .setNativeWebScreenshot(true)
                 .setNewCommandTimeout(Duration.ofSeconds(3600));
